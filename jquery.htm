@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Tips - jQuery</title>
+
+  <!-- jQuery CDN (ONLY ONCE) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Interaction 1: Hover welcome -->
+  <script>
+    $(document).ready(function(){
+      $("#welcomeGolf").mouseenter(function(){
+        alert("Welcome to Golf Tips Hub! ⛳");
+      });
+    });
+  </script>
+
+  <!-- Interaction 2: Click to hide tips -->
+  <script>
+    $(document).ready(function(){
+      $(".hideTip").click(function(){
+        $(this).hide();
+      });
+    });
+  </script>
+
+  <!-- Interaction 3: Toggle drills -->
+  <script>
+    $(document).ready(function(){
+      $("#toggleDrills").click(function(){
+        $(".drillText").toggle();
+      });
+    });
+  </script>
+
+  <!-- Interaction 4: Swing animation -->
+  <script>
+    $(document).ready(function(){
+      $("#animateSwing").click(function(){
+        $("#swingText")
+          .css("color", "green")
+          .slideUp(1000)
+          .slideDown(1000);
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Golf Tips Hub ⛳</h1>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Tips</a>
+    <a href="celebrity.html">Pro Golfers</a>
+    <a href="materialize.html">Materialize</a>
+    <a href="jquery.html">JQuery</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <a href="dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<hr>
+
+<!-- Section 1 -->
+<section style="background-color: #d4f7d4; padding: 20px;">
+  <h2 id="welcomeGolf">Hover for a Golf Welcome</h2>
+  <p>Start improving your game today.</p>
+</section>
+
+<hr>
+
+<!-- Section 2 -->
+<section style="background-color: #e0f0ff; padding: 20px;">
+  <h2>Click to Remove Tips</h2>
+  <p class="hideTip">Keep your head down during your swing.</p>
+  <p class="hideTip">Follow through for better distance.</p>
+  <p class="hideTip">Grip pressure should stay relaxed.</p>
+</section>
+
+<hr>
+
+<!-- Section 3 -->
+<section style="background-color: #fff3cd; padding: 20px;">
+  <h2>Practice Drills</h2>
+  <button id="toggleDrills">Show/Hide Drills</button>
+
+  <p class="drillText">Putting drill: Practice 5-foot putts repeatedly.</p>
+  <p class="drillText">Chipping drill: Focus on landing spots.</p>
+</section>
+
+<hr>
+
+<!-- Section 4 -->
+<section style="background-color: #f5d0ff; padding: 20px;">
+  <h2>Swing Animation</h2>
+  <p id="swingText">Click below to see a smooth swing effect.</p>
+  <button id="animateSwing">Animate Swing Tip</button>
+</section>
+
+</body>
+</html>
